@@ -17,7 +17,7 @@ function createProj(id, title, desc, url) {
         id: id.toLowerCase(),
         title,
         desc,
-        img: `img/projects/${id}.png`,
+        img: `img/projects/${id.toLowerCase()}.png`,
         url,
         publishedAt: Date.now(),
     }
