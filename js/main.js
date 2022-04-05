@@ -3,7 +3,7 @@
 console.log('Starting up');
 
 $(document).ready(init);
-$('.new-contact').click(onSubmit)
+$('.new-contact').on('submit', onSubmit);
 
 
 
@@ -78,8 +78,6 @@ function onSubmit(ev) {
     ev.preventDefault();
     let userSubject = $('#subject-input').val();
     let userText = $('#body-input').val();
-    console.log(userSubject)
-    console.log(userText)
     if (!userSubject || !userText) return;
     window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=amit.akoka98@gmail.com&su=${userSubject}&body=${userText}`);
     openCanvas(); //close canvas.
